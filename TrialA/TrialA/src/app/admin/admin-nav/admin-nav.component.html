@@ -1,0 +1,222 @@
+<!-- ADMIN NAV BAR -->
+  <div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h5> N d o N a n d i</h5>
+        </div>
+        <ul class="list-unstyled components">       
+          <li>            
+              <a href="./dashboard"><i class="bi bi-house-door-fill"> &nbsp;</i>Dashboard</a>
+          </li>
+          <li>
+              <a href="./schedule"><i class="bi bi-calendar-fill">&nbsp;</i> Schedule</a>
+          </li>
+          <li>
+            <a href="./service-packages"><i class="bi bi-receipt">&nbsp;</i> Service Packages</a>
+        </li>
+            <li>
+                <a href="#hairSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-chat-left-text-fill">&nbsp;</i> Hair Condition</a>
+                <ul class="collapse list-unstyled" id="hairSubmenu">
+                    <li>
+                        <a href="./hair-condition">Hair Condition</a>
+                    </li> 
+                    <li>
+                        <a href="./hair-density">Hair Density</a>
+                    </li>
+                    <li>
+                        <a href="./hair-length">Hair Length</a>
+                    </li>
+                    <li>
+                        <a href="./allergens">Allergens</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./blog"><i class="bi bi-chat-dots-fill">&nbsp;</i> Blogs</a>
+            </li>
+            <li>
+                <a href="./tutorials"><i class="bi bi bi-camera-video-fill">&nbsp;</i> Tutorials</a>
+            </li>
+            <li>
+              <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-cart-fill">&nbsp;</i> Products</a> 
+              <ul class="collapse list-unstyled" id="productSubmenu">
+                  <li>
+                      <a href="./product">Products</a>
+                  </li>
+                  <li>
+                      <a href="./product-type">Product Types</a>
+                  </li>
+              </ul>
+          </li> 
+          <li>
+            <a href="./orders"><i class="bi bi-bag-fill">&nbsp;</i> Orders</a>
+        </li>
+          <li>
+              <a href="#inventorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-bar-chart-fill">&nbsp;</i> Inventory</a>
+              <ul class="collapse list-unstyled" id="inventorySubmenu">
+                  <li>
+                      <a href="./inventory-item">Inventory Items</a>
+                  </li>
+                  <li>
+                      <a href="./inventory-type">Inventory Types</a>
+                  </li>
+                  <li>
+                      <a href="./inventory-levels">Inventory Levels</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#returnSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-geo-alt-fill"> &nbsp;</i>Locations</a>
+              <ul class="collapse list-unstyled" id="returnSubmenu">
+                  <li>
+                      <a href="./suburb">Suburbs</a>
+                  </li>
+                  <li>
+                      <a href="./city">Cities</a>
+                  </li>
+                  <li>
+                    <a href="./province">Provinces</a>
+                </li>
+                  <li>
+                    <a href="./country">Countries</a>
+                </li>
+              </ul>
+          </li>
+            <li>
+                <a href="./voucher"><i class="bi bi-cash">&nbsp;</i> Vouchers</a>
+            </li>
+            <li>
+            <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-card-list" > &nbsp;</i>Reports</a>
+            <ul class="collapse list-unstyled" id="reportSubmenu">
+                <li>
+                    <a href="./sales-report">Sales Report</a>
+                </li>
+                <li>
+                    <a href="./booking-report">Booking Report</a>
+                </li>
+                <li>
+                    <a href="./product-report">Product Report</a>
+                </li>
+                <li>
+                    <a href="./delivery-report">Delivery Report</a>
+                </li>
+                <li>
+                    <a href="./customer-report">Customer Report</a>
+                </li>
+                <li>
+                    <a href="./inventory-report">Inventory Report</a>
+                </li>
+                <li>
+                    <a href="./orders-report">Orders Report</a>
+                </li>
+            </ul>
+        </li>
+          <li>
+              <a href="./user"><i class="bi bi-person-fill">&nbsp;</i> Users</a>
+          </li>
+          <li>
+            <a href="./help"><i class="bi bi-question-circle">&nbsp;</i> Help</a>
+        </li>
+        </ul>
+    </nav> 
+
+    <div class="d-none d-lg-block" id="full">
+        <nav class="navbar ">
+          <h5>
+              <div class="one">N d o N a n d i</div>
+          </h5>
+                <ul class="nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Hi, Thando Vumisa &nbsp;<i class="bi bi-person-fill"></i></a>
+                            <div class="dropdown-menu">
+                               <!--  <a class="dropdown-item" id="logout" (click)="logout()" >Log Out</a> -->
+                            </div>
+                    </li>
+                </ul>          
+        </nav>      
+    </div>   
+    
+<!-- ADMIN MOBILE NAV BAR -->
+   <div class="d-lg-none" id="mobile">
+        <nav class="navbar navbar-expand-lg ">
+            <h5>
+              <div class="one">N d o N a n d i</div>
+            </h5> 
+                <button class="btn btn-outline-secondary " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list" style="color: white; "></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="./bookings">Bookings</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="./bookings">Services</a>
+                        </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Hair Condition</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./hair-condition">Hair Condition</a>
+                                <a class="dropdown-item" href="./hair-density">Hair Density</a>
+                                <a class="dropdown-item" href="./hair-length">Hair Length</a>
+                                <a class="dropdown-item" href="./allergens">Allergens</a>
+                            </div>
+                          </li>
+                          <li class="nav-item"> 
+                            <a class="nav-link" href="./blog">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./product">Products</a>
+                                <a class="dropdown-item" href="./product-type">Product Types</a>
+                            </div>
+                          </li>
+                          <li class="nav-item"> 
+                            <a class="nav-link" href="./orders">Orders</a>
+                        </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Inventory</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./inventory-item">Products</a>
+                                <a class="dropdown-item" href="./inventory-type">inventory Types </a>
+                                <a class="dropdown-item" href="./inventory-levels">inventory Levels</a>
+                            </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Locations</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./suburb">Suburbs</a>
+                                <a class="dropdown-item" href="./city">Cities</a>
+                                <a class="dropdown-item" href="./province">Provinces</a>
+                                <a class="dropdown-item" href="./country">Country</a>
+                            </div>
+                          </li>
+                          <li class="nav-item"> 
+                            <a class="nav-link" href="./vouvher">Vouchers</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./sales-report">Sales Report</a>
+                                <a class="dropdown-item" href="./booking-report">Booking Report</a>
+                                <a class="dropdown-item" href="./schedule-report">Schedule Report</a>
+                                <a class="dropdown-item" href="./customer-report">Customer Report</a>
+                                <a class="dropdown-item" href="./inventory-report">Inventory Report</a>
+                                <a class="dropdown-item" href="./orders-report">Orders Report</a>
+                            </div>
+                          </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="./user">Users</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <!-- <a class="nav-link" id="logout" (click)="logout()"> Log Out &nbsp;<i class="bi bi-box-arrow-right"></i></a> -->
+                        </li>
+                    </ul>
+                </div> 
+        </nav>      
+    </div>  
+  </div>

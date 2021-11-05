@@ -1,0 +1,79 @@
+<!-- CLIENT NAV BAR -->
+ 
+<div class="d-none d-lg-block" id="full" *ngIf="admin">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./home"> N d o N a n d i </a>
+          <header id="header">
+              <div class="one"><a href="/home">N d o N a n d i</a></div>
+                <nav class="links">
+                  <ul>  
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/sessions">Services</a></li>
+                    <li><a href="/consultation">Consultations</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/blog-entry">Blog</a></li>
+                    <li><a href="/tutorial">Tutorials</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <a href="/register">
+                      <button type="button" class="btn btn-success" id="two">Sign Up</button>
+                    </a>    
+                    <li id="three"><a href="/login">Login</a></li>
+                   <!--  <li id="three"><a id="logout" (click)="logout()">Logout</a></li> -->
+                  </ul>
+                </nav>
+          </header>
+    </nav> 
+  </div>  
+
+
+  <!-- CLIENT MOBILE NAV BAR -->
+
+  <div class="d-lg-none" id="mobile" *ngIf="admin">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" href="#">N d o N a n d i</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sessions">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/consultation">Consultations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog-entry">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact-us">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tutorial">Tutorials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile">Profile</a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a href="/login">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" id="three">Login</button>
+              </a> 
+              <a href="/register">
+              <button class="btn btn-success my-2 my-sm-0" type="button" id="two">Sign Up</button>
+              </a>
+            </div>
+          </div>
+    </nav>
+  </div> 

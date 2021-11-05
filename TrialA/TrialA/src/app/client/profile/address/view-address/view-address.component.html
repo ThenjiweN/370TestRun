@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 order-md-1 mb-4">
+        <ul class="list-group mb-3" id="small">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <a href="./profile"><h6 class="my-0">Profile</h6></a>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <a href="./client-orders"> <h6 class="my-0">Orders</h6></a>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <a href="./client-bookings"><h6 class="my-0">Bookings</h6></a>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <a href="./view-address"><h6 class="my-0">Address</h6></a>
+            </div>
+          </li>
+      </ul>
+      </div>  
+      <div class="col-md-8 order-md-2" id="big">
+        <div class="row">
+        <h4 class="col-md-10 mb-2">My Address</h4>
+      <div class="col-md-2 mb-1">
+        <a href="./add-address" type="button" class="btn btn-success" id="add">Add</a>
+      </div>          
+        </div>
+
+        <p>
+        598 Jacaranda Street <br>
+        Joburn<br>
+        Pretoria<br>
+        Gauteng<br>
+        South Africa <br>
+        0156
+        </p>
+        <div class="but">
+            <a href="./update-address" type="button"  class="btn btn-dark" id="add">Edit</a>     
+            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#confirmationBox" id="cancel">Delete</button>      
+            </div>
+          </div>  
+      </div>
+
+
+    <div class="modal fade" id="confirmationBox" tabindex="-1" role="dialog" aria-labelledby="confirmationBoxTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="confirmationBoxLongTitle">Confirmation required</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete the address?
+          </div>
+          <div class="modal-footer" >
+              <a href="./view-address">
+                  <button type="button" class="btn btn-dark">Confirm</button>
+              </a>      
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+          </div>
+      </div>
+      </div>
+  </div>  
+
+
+
+  </div>

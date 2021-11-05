@@ -1,0 +1,194 @@
+
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <div class="row" row justify-content-start>
+      <div class="col-10 col-sm-10 col-md-10">
+         <h5> Products 
+         <a href="../../../assets/help/help.pdf" target="_blank" data-toggle="tooltip" data-placement="top" title="View products help document"> <i class="bi bi-question-circle-fill"></i></a> 
+        </h5>
+      </div>
+      <div class="col-2">
+        <div class="d-lg-none">
+          <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#create">Add</button>
+        </div>
+      </div>
+    </div>
+  
+      <br>  
+         
+      <div class="row"> 
+        <div class="col-md-9 col-lg-8" id="btn" >
+          <div class="d-none d-lg-block">
+            <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#create">Add</button>
+          </div>
+        </div>
+        <div class="col-10 col-sm-10 col-md-10 col-lg-3">                       
+          <div class="form-group">
+            <input name="" class="form-control"  type="search">
+          </div>
+        </div>
+        <div class="col-2 col-sm-2 col-md-2 col-lg-1">            
+          <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-search"></i> </button>           
+        </div>
+      </div>           
+      <br>   
+   
+    <div class="table-responsive">
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr> 
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+           <!--  <th scope="col">Quantity</th> -->
+            <th scope="col">Type</th>
+            <th scope="col">Actions</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of allProducts | async">
+            <th scope="row"> {{product.ID}}</th>
+            <td>{{product.ProductName}}</td> 
+            <td>{{product.ProductDescription}}</td>
+            <td>{{product.ProductPrice}}</td>
+            <td>{{product.TypeID}}</td>
+            <td> 
+              <i class="bi bi-pencil-square" (click)="getProductById(product.ID)" data-toggle="modal" data-target="#update"></i>              
+              &nbsp;
+              <i class="bi bi-trash-fill" (click)="deleteProduct(product.ID)"></i>
+            </td>
+          </tr>
+        </tbody> 
+      </table> 
+    </div>
+
+    <br> 
+    <br> 
+                
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav> 
+
+</div>
+</div>  
+
+
+<div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="createBoxTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="createBoxLongTitle">Create Product</h5>
+        <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="productForm"  (ngSubmit)="createProduct(productForm.value)"> 
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" formControlName="ProductName" id="ProductName">
+              </div> 
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Description">Description</label>
+                <input type="text" class="form-control" formControlName="ProductDescription" id="ProductDescription">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Price">Price</label>
+                <input type="number" class="form-control" formControlName="ProductPrice" id="ProductPrice">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Type">Product Type</label>
+                <select class="form-control" formControlName="TypeID" id="Type">
+                <option></option>
+                </select>
+              </div> 
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6 mb-3">
+                  <p>Upload product image</p>
+                   <input type="file" formControlName="PictureUrl" id="PictureUrl">
+              </div>
+            </div>                              
+            <div class="modal-footer" >
+              <button type="submit" class="btn btn-success" id="three"  [disabled]="!productForm.valid" >Submit</button>
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form> 
+        </div>
+    </div>
+  </div> 
+</div>
+
+
+<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="updateBoxTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="updateBoxLongTitle">Update Product</h5>
+        <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="productForm"  (ngSubmit)="updateProduct(productForm.value)"> 
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" formControlName="ProductName" id="ProductName">
+              </div> 
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Description">Description</label>
+                <input type="text" class="form-control" formControlName="ProductDescription" id="ProductDescription">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Price">Price</label>
+                <input type="number" class="form-control" formControlName="ProductPrice" id="ProductPrice">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="Type">Product Type</label>
+                <select class="form-control" formControlName="TypeID" id="Type">
+                <option></option>
+                </select>
+              </div> 
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6 mb-3">
+                  <p>Upload product image</p>
+                   <input type="file" formControlName="PictureUrl" id="PictureUrl">
+              </div>
+            </div>                             
+            <div class="modal-footer" >
+              <button type="submit" class="btn btn-success" id="three"  [disabled]="!productForm.valid" >Submit</button>
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form> 
+        </div>
+    </div>
+  </div> 
+</div>
+
+

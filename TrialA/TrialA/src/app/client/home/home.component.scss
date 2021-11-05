@@ -1,0 +1,101 @@
+.home{
+    background-image: url("../../../assets/images/main.png");
+    height: 100%;  
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    
+ 
+  }
+
+
+h5{
+  color:white;
+}
+
+
+.slide{
+    height: 500px;
+    width: 100%;
+}
+
+  img{
+   
+      height: 100%;
+      width: 1300px;
+    
+  }
+ 
+  #top{
+    margin-top: 550px;
+    
+  }  
+
+
+  .button{
+    background-color: #3A5627;
+    font-family: Montserrat-Regular;
+    border: none;
+    color: white;
+    padding: 15px 65px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.button1:hover {
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+ .service{
+  background-image: url("../../../assets/images/cat.png");
+  height: 100%;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+}
+ 
+#one{
+    margin-top: 300px;
+    margin-left: 40%;
+}
+
+#two{
+      margin-top: 500px;
+      margin-left: 48%;
+}
+
+.product{
+  background-image: url("../../../assets/images/product.png");
+  height: 100%;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+}
+ 
+#three{
+    margin-top: 550px;
+      margin-left: 74%;
+}
+
+.shoot{
+  background-image: url("../../../assets/images/shoot.png");
+  height: 100%;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+}
+
+.home{
+  text-align: center;
+}
+
+
+
+

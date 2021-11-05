@@ -1,0 +1,31 @@
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <h5>Update tutorial</h5>
+          <h6>tutorial Information</h6>     
+            <form > 
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="Title">Title</label>
+                    <input type="text" class="form-control" id="Title" required>
+                  </div>
+                </div> 
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="Desription">Desription</label>
+                    <textarea type="text" class="form-control" id="Desription" required></textarea>
+                  </div> 
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-3">
+                        <p>Upload tutorial video</p>
+                         <input type="file" formControlName="PictureUrl" id="PictureUrl">
+                    </div>
+                  </div>
+                <br>
+                  <button type="submit" class="btn btn-success" id="three">Submit</button>
+                <a href="./tutorials">       
+                  <button type="button" class="btn btn-outline-secondary">Cancel</button>        
+                </a>                              
+            </form>        
+    </div>
+</div>

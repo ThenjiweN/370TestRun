@@ -1,0 +1,76 @@
+.jumbotron{
+    padding-top: 6%;
+    height: 50%;
+    background-image: url("/../../assets/images/session.png"); 
+    background-size: cover;
+    background-position: center; 
+}  
+    
+.container{
+    padding-bottom: 5%;
+}
+
+h1{
+    padding-top: 4%;
+    font-family: Montserrat-Medium; 
+}
+
+
+h2{
+    padding-top: 4%;
+    padding-bottom: 5%;
+    font-family: Montserrat-Medium; 
+    text-align: center;
+}
+
+.card{
+    width: 300px;
+    border: none; 
+    background-color: #F8F8F8;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.card:hover {
+    background-color:#222323;
+    color: white;
+  }
+
+
+h4{
+    text-align: center;
+    font-family: Montserrat; 
+    color: #689C44;
+}
+
+.card-text{
+    text-align: center;
+}
+
+
+#duration{
+    color: #689C44;
+}
+
+#price{
+    text-align: center;
+}
+
+#two{
+    background-color: #3A5627;
+    border-color: #3A5627;
+  }
+
+  #two:hover{
+    color: white;
+    border: 1px solid white; 
+    background-color: #222323;
+  }
+
+  
+@media (max-width: 1024px) {
+    .jumbotron {
+      height: 25%;
+   } 
+} 

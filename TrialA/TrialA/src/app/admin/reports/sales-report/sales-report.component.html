@@ -1,0 +1,45 @@
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row" row justify-content-start>
+        <div class="col-10 col-sm-10 col-md-10">
+           <h5>Sales Report</h5>
+        </div>
+      </div>
+    <br>
+    <form>
+      <div class="row">
+<!--           <div class="col-md-12 col-lg-5">
+            <label for="filter">Filter</label>
+            <select class="custom-select d-block w-100" id="filter" required>
+              <option value="">Select...</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid filter.
+            </div>
+          </div> -->
+          <div class="col-md-6 col-lg-3 ">
+            <label for="start">Start Date</label>
+            <input type="date" class="form-control" id="start" required>
+            <div class="invalid-feedback">
+              Please provide a valid start date.
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ">
+              <label for="end">End Date</label>
+              <input type="date" class="form-control" id="end" required>
+              <div class="invalid-feedback">
+                Please provide a valid end date.
+              </div>
+            </div>
+          <div class="col-md-3 ">
+              <button type="submit" class="btn btn-success">Generate</button>   
+          </div>
+        </div>
+      </form>
+
+        <iframe src="../../../assets/reports/sales.pdf">
+        </iframe>
+
+      </div> 
+      <br>   
+</div>

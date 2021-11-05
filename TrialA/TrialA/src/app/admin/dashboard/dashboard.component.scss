@@ -1,0 +1,38 @@
+
+#page-content-wrapper {
+  width: calc(100% - 250px);
+  padding-top: 80px;
+  padding-left: 20px;
+  min-height: 100vh; 
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  }
+
+
+img{
+  width: 40%;
+  height: 40%;
+
+}
+
+
+/* .container{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+ */
+
+
+
+  @media (max-width: 768px) {
+    #page-content-wrapper {
+       width: 100%;
+       padding-left: 0px;
+   } 
+}

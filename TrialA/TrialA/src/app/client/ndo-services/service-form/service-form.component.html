@@ -1,0 +1,135 @@
+<div class="container">
+  <h2>SERVICE FORM</h2> 
+    <div class="flex-container">
+        <p>
+            Studio hours me show you how being a virtuous woman today is possible –
+            and my guess is you are already well on your way to living out God’s purpose for your life. 
+            And that’s what Proverbs 31 Studio hours me show you how being a virtuous woman today is possible –
+            and my guess is you are already well on your way to living out God’s purpose for your life. 
+            And that’s what Proverbs 31
+        </p>   
+    </div>  
+ 
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4" id="summary">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-success">Booking Summary</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Session name</h6>
+                <small class="text-muted">Protectige style session</small>
+              </div> 
+              <span class="text-muted">R520</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Hair Length</h6>
+                <small class="text-success">Armpit Length</small>
+              </div>
+              <span class="text-success">+R30</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Hair Condition</h6>
+                <small class="text-success">My hair is very tangled</small>
+              </div>
+              <span class="text-success">+R60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Hair Density</h6>
+                  <small class="text-muted">not sure</small>
+                </div>
+                <span class="text-muted">-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Add Ons </h6>
+                  <small class="text-success">Blow dry</small>
+                </div>
+                <span class="text-success">+R30</span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (ZAR)</span>
+              <strong>R640</strong>
+            </li>
+          </ul>   
+          <a class="btn btn-block" href="./service-payment" id="continue">Continue</a>      
+        </div>
+    
+
+        
+
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Hair Information</h4>
+          <form class="needs-validation" novalidate>
+
+            <div class="mb-3">
+              <label for="hairLength">Hair Length</label>
+              <select class="custom-select d-block w-100" id="hairLength" required>
+                <option value="">Select</option>
+                <option>Ear Length</option>
+                <option>Neck Length</option>
+                <option>Shoulder Length</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid hair length.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="hairCondition">Hair Condition</label>
+              <select class="custom-select d-block w-100" id="hairCondition" required>
+                <option value="">Select</option>
+                <option>My hair could use a bit of detangling</option>
+                <option>My hair is very tangled</option>
+                <option>I just took out braids and have not detangled</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid hair condition.
+              </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="hairDensity">Hair Density</label>
+                <select class="custom-select d-block w-100" id="hairDensity" required>
+                  <option value="">Select</option>
+                  <option>I have a lot of hair and its thick</option>
+                  <option>I don’t have a lot of hair and its fine/thin</option>
+                  <option>not sure</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid hair density.
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="allergen">Allergens</label>
+                <select class="custom-select d-block w-100" id="allergen" required>
+                  <option value="">Select</option>
+                  <option>Mango</option>
+                  <option>Peanut Butter</option>
+                  <option>Shea Butter</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid allergen.
+                </div>
+              </div>
+
+            
+            <label for="addOn">Add Ons</label>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="addOn">
+              <label class="custom-control-label" for="addOn">Blow dry</label>
+            </div>
+            <hr class="mb-4">
+            </form>  
+            <a href="./sessions">
+                <button type="button" class="btn btn-outline-dark" id="cancel">Cancel</button>
+            </a>
+        </div>
+
+    </div>      
+</div>

@@ -1,0 +1,40 @@
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <h5>Update Inventory Item</h5>
+      <h6>Inventory Item Information</h6>   
+        <form> 
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inventoryTypeName">Name</label>
+              <input type="text" class="form-control" formControlName="Name" id="Name" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Description">Description</label>
+              <input type="text" class="form-control" formControlName="Description" id="Description" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Quantity">Quantity</label>
+              <input type="number" class="form-control" formControlName="Quantity" id="Quantity" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="TypeID">Type</label>
+              <select class="form-control" id="TypeID" formControlName="TypeID" required>
+                <option value="">Select</option>
+                <option></option>
+              </select>
+            </div>
+          </div>
+          <br>
+            <button type="submit" class="btn btn-success" id="three" >Submit</button>
+              <a href="./inventory-item">       
+                <button type="button" class="btn btn-outline-secondary">Cancel</button>        
+              </a>                              
+        </form>        
+    </div>
+</div>

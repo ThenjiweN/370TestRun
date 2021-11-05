@@ -1,0 +1,28 @@
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+      <h5>Update City</h5>
+        <h6>City Information</h6>   
+          <form> 
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" formControlName="Name" id="Name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Province">Province</label>
+                <select class="form-control" formControlName="Province" id="Province" required>
+                  <option selected>Choose...</option>
+                </select>
+              </div> 
+            </div>
+            <br>
+              <button type="submit" class="btn btn-success" id="three" >Submit</button>
+                <a href="./city">       
+                  <button type="button" class="btn btn-outline-secondary">Cancel</button>        
+                </a>                              
+          </form> 
+    </div>
+  </div>    
+

@@ -1,0 +1,39 @@
+ 
+#block{
+    background-color: #fcfcfc;
+    padding : 20px;
+   border-radius: 5px;
+}  
+     
+
+a{
+   color: black;
+}
+
+#page-content-wrapper {
+  width: calc(100% - 250px);
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  }
+  
+  @media (max-width: 768px) {
+   #page-content-wrapper {
+      width: 100%;
+      padding-left: 0px;
+  } 
+
+}
+
+@media (max-width: 1024px) {
+   #page-content-wrapper {
+      padding-left: 0px;
+      padding-right: 0px;
+  } 
+}
+

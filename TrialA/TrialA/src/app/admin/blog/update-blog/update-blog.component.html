@@ -1,0 +1,32 @@
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <h5>Update Blog</h5>
+          <h6>Blog Information</h6>     
+            <form> 
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="Title">Title</label>
+                    <input type="text" class="form-control" id="Title" required>
+                  </div>
+                </div> 
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="Content">Content</label>
+                    <textarea type="text" class="form-control" id="Content" required></textarea>
+                  </div> 
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-3">
+                        <p>Upload blog image</p>
+                         <input type="file" formControlName="PictureUrl" id="PictureUrl">
+                    </div>
+                  </div>
+                <br>
+                  <button type="submit" class="btn btn-success" id="three">Submit</button>
+                <a href="./blog">       
+                  <button type="button" class="btn btn-outline-secondary">Cancel</button>        
+                </a>                              
+            </form>        
+    </div>
+</div>
+ 

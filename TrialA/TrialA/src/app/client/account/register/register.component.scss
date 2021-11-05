@@ -1,0 +1,112 @@
+
+ p{
+  width: 300px;
+ }
+ 
+
+.card{
+  width: 600px;
+  color: black; 
+  margin-bottom: 40px;
+} 
+
+.register{
+  /* background-color: rgb(209, 209, 209); */
+  background-image: url("/../../assets/images/regm.png");  
+  height: 100%;  
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+  color: white;
+}
+
+
+
+img{
+  max-width:100%;
+  height:auto;
+
+}
+
+
+h2{
+  padding-top: 5%;
+  font-family: Montserrat-Medium; 
+  text-align: center;
+  padding-bottom: 20px;
+  
+}
+  
+
+ .holder{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} 
+
+
+.mid{
+ 
+ text-align: center;
+}
+
+a{
+ color: black;
+}
+
+a:link {
+ color: black;
+ background-color: transparent;
+ text-decoration: none;
+}
+
+#two{
+ background-color: #3A5627;
+ border-color: #3A5627;
+}
+
+
+#two:hover {
+ background-color: #2b411d;
+}
+
+#one{
+ color: #3A5627;
+ border: 1px solid #3A5627; 
+}
+
+
+#one:hover {
+ background-color: #3A5627;
+ border-color: #3A5627;
+ color: white;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+     width: 100%;
+     padding-left: 0px;
+ } 
+
+ h2{
+   text-align: center;
+ }
+}
+
+
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+    padding-left: 0px;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+} 

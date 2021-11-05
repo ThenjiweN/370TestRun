@@ -1,0 +1,38 @@
+
+<div class="login">     
+        <div class="d-flex justify-content-center">
+            <div class="card">
+                <h2>LOGIN</h2> 
+                <div class="card-body"> 
+                    <form [formGroup]="loginForm"(ngSubmit)="Login(loginForm.value)">
+                        <div class="form-group col">
+                            <label for="email">Email</label> 
+                            <input type="email" class="form-control" id="UserEmail" formControlName="UserEmail"  required>
+                        </div>
+                        <div class="form-group col">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="UserPassword" formControlName="UserPassword" required>
+                        </div>                   
+                        <br>
+ 
+                        <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+                            {{errorMessage}}
+                        </div>
+                        <div class="form-group col">
+                        <button type="submit" class="btn btn-primary btn-block" id="two" [disabled]="!loginForm.valid"> Login </button>     
+                        </div>      
+                        <div class="mid">
+                            <a routerLink="./reset-password">Forgot password?</a>
+                        </div>                      
+                    </form>
+                    <br> 
+                    <br> 
+                    <div class="row">                               
+                    </div>
+                    <p class="float-left" >Don't have an account?</p>
+                    <a routerLink="./register" class="float-right btn btn-outline-primary" id="one">Sign up</a>
+                </div>
+            </div> 
+        </div>   
+</div>
+ 

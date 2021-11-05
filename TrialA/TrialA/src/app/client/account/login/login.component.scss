@@ -1,0 +1,69 @@
+.login{
+  /* background-color: rgb(209, 209, 209); */
+  background-image: url("/../../assets/images/logi.png"); 
+  height: 100%;  
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+  color: white;
+}
+   
+ .card{ 
+  width: 400px;
+  border: none;
+  color: black;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+  
+h2{
+  padding-top: 10%;
+  font-family: Montserrat-Medium; 
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+.mid{
+  
+  text-align: center;
+}
+
+a{
+  color: black;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#two{
+  background-color: #3A5627;
+  border-color: #3A5627;
+}
+
+
+#two:hover {
+  background-color: #2b411d;
+}
+
+#one{
+  color: #3A5627;
+  border: 1px solid #3A5627; 
+}
+
+
+#one:hover {
+  background-color: #3A5627;
+  border-color: #3A5627;
+  color: white;
+}
+
