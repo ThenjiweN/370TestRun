@@ -1,5 +1,5 @@
 export class Condition {
-    ID: string;
-    Name: string;
+    id: string;
+    name: string;
 }
  

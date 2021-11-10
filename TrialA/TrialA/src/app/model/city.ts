@@ -1,5 +1,6 @@
 export class City {
-    CityID: string;
-    Name: string;
-    ProvinceID: number;
+    cityId: string;
+    name: string;
+    provinceId: number;
 }
+ 

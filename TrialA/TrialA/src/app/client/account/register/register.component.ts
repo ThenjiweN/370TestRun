@@ -18,8 +18,11 @@ export class RegisterComponent implements OnInit {
   
   ngOnInit() {
     this.regForm = this.formbulider.group({  
-      UserEmail: ['', [Validators.required]],
-      UserPassword: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      phoneNumber: ['', [Validators.required]],
+      password: ['', [Validators.required]],
       });  
     }
 
@@ -27,7 +30,7 @@ export class RegisterComponent implements OnInit {
     this.apiService.createUser(user).subscribe( (res:User) => {  
     console.log(res);  
     localStorage.setItem("accessToken", res.SessionID);
-    localStorage.setItem("user", res.UserEmail);
+    localStorage.setItem("user", res.Email);
     this.router.navigate(["./home"])          
     })
   }

@@ -1,9 +1,9 @@
 export class Product {
     ID: string;
-    ProductName: string;
-    ProductDescription: string;
-    ProductPrice: number; // decimal
-    TypeID: number;
-    PictureUrl: string; //not sure - Is it blob?
+    Name: string;
+    ProductDesc: string;
+    Price: number; // decimal
+    typeId: number;
+    Image: string; //not sure - Is it blob?
 }
   

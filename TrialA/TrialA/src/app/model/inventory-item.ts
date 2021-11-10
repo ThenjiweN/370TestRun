@@ -1,8 +1,7 @@
 export class InventoryItem {
-    ID: string;
-    Name: string;
-    Description: string;
-    Quantity: number;
-    TypeID: number;
+    id: string;
+    name: string;
+    itemDesc: string;
+    typeID: number;
 }
- 
+  

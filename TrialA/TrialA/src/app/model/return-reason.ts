@@ -1,5 +1,4 @@
-export class Density {
+export class ReturnReason {
     id: string;
     name: string;
 }
- 

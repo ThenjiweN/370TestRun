@@ -1,6 +1,6 @@
 export class Suburb {
-    SuburbID: string;
-    Name: string;  
-    CityID: number;
+    subhurbId: string;
+    name: string;  
+    cityId: number;
 }
  

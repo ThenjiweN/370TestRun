@@ -1,4 +1,4 @@
 export class Length {
-    ID: string;
-    Name: string;
+    id: string;
+    name: string;
 }

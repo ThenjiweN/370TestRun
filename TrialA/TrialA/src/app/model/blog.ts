@@ -1,8 +1,8 @@
 export class Blog {
-    ID: string;
-    Title: string;
-    Content: string;
-    Date: Date; //not sure
-    PictureUrl: string;  //blob?
+    id: string;
+    title: string;
+    content: string;
+    date: string;
+    image: string;  //blob?
 }
  

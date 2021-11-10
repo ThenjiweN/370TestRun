@@ -1,0 +1,166 @@
+
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <div class="row" row justify-content-start>
+      <div class="col-10 col-sm-10 col-md-10">
+         <h5>Inventory Item </h5>
+      </div>
+      <div class="col-2">
+        <div class="d-lg-none">
+          <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#create">Add</button>
+        </div>
+      </div>
+    </div>
+  
+      <br>  
+         
+      <div class="row"> 
+        <div class="col-md-9 col-lg-8" id="btn" >
+          <div class="d-none d-lg-block">
+            <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#create">Add</button>
+          </div>
+        </div>
+        <div class="col-10 col-sm-10 col-md-10 col-lg-3">                       
+          <div class="form-group">
+            <input name="" class="form-control"  type="search">
+          </div>
+        </div>
+        <div class="col-2 col-sm-2 col-md-2 col-lg-1">            
+          <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-search"></i> </button>           
+        </div>
+      </div>          
+      <br>   
+   
+    <div class="table-responsive">
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Type</th>
+            <th scope="col">Actions</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of allInventoryItems | async">
+            <th scope="row"> {{item.id}}</th>
+            <td>{{item.name}}</td> 
+            <td>{{item.itemDesc}}</td> 
+            <td>{{item.typeID}}</td> 
+            <td> 
+              <i class="bi bi-pencil-square" (click)="getInventoryItemById(item.id)" data-toggle="modal" data-target="#update"></i>              
+              &nbsp;
+              <i class="bi bi-trash-fill" (click)="deleteInventoryItem(item.id)"></i>
+            </td>
+          </tr>
+        </tbody> 
+      </table> 
+    </div>
+
+    <br> 
+    <br>
+                
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav> 
+
+</div>
+</div>  
+
+
+<div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="createBoxTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="createBoxLongTitle">Create Inventory Item</h5>
+        <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="inventoryItemForm"  (ngSubmit)="createInventoryItem(inventoryItemForm.value)"> 
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="inventoryTypeName">Name</label>
+                <input type="text" class="form-control" formControlName="name" id="name" required>
+              </div>
+            </div>
+            <div class="form-row"> 
+              <div class="form-group col">
+                <label for="itemDesc">Description</label>
+                <input type="text" class="form-control" formControlName="itemDesc" id="itemDesc" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="typeID">Type</label>
+                <select class="form-control" id="typeID" formControlName="typeID" required>
+                  <option value="">Select</option>
+                  <option></option>
+                </select>
+              </div>
+            </div>                             
+            <div class="modal-footer" >
+              <button type="submit" class="btn btn-success" id="three"  [disabled]="!inventoryItemForm.valid" >Submit</button>
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form> 
+        </div>
+    </div> 
+  </div> 
+</div>
+
+
+<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="updateBoxTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="updateBoxLongTitle">Update Inventory Item</h5>
+        <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="inventoryItemForm"  (ngSubmit)="updateInventoryItem(inventoryItemForm.value)"> 
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="inventoryTypeName">Name</label>
+                <input type="text" class="form-control" formControlName="name" id="name" required>
+              </div>
+            </div>
+            <div class="form-row"> 
+              <div class="form-group col">
+                <label for="itemDesc">Description</label>
+                <input type="text" class="form-control" formControlName="itemDesc" id="itemDesc" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="typeID">Type</label>
+                <select class="form-control" id="typeID" formControlName="typeID" required>
+                  <option value="">Select</option>
+                  <option></option>
+                </select>
+              </div>
+            </div>                           
+            <div class="modal-footer" >
+              <button type="submit" class="btn btn-success" id="three"  [disabled]="!inventoryItemForm.valid" >Submit</button>
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form> 
+        </div>
+    </div>
+  </div> 
+</div>
+

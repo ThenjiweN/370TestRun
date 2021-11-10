@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
  
   ngOnInit() {
     this.loginForm = this.formbulider.group({  
-      UserEmail: ['', [Validators.required]],
-      UserPassword: ['', [Validators.required]]
+      Email: ['', [Validators.required]],
+      Password: ['', [Validators.required]]
       }) 
     if (localStorage.getItem("accessToken")){
       this.router.navigate(["./home"])
@@ -38,16 +38,16 @@ export class LoginComponent implements OnInit {
         this.showError = true;      
       } else {
         localStorage.setItem("accessToken" ,res.SessionID);
-        this.authenticateUser(user.UserEmail);
+        this.authenticateUser(user.Email);
         this.showError = false;
       }
     })
   }
 
 
-  authenticateUser(UserEmail){
-    localStorage.setItem("user", UserEmail);
-    if(UserEmail == "admin@gmail.com"){
+  authenticateUser(Email){
+    localStorage.setItem("user", Email);
+    if(Email == "admin@gmail.com"){
       this.router.navigate(['/dashboard']);
     } else { 
       this.router.navigate(['/home']);

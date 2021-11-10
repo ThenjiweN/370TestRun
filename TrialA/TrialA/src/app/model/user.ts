@@ -1,7 +1,9 @@
 export class User {
     UserID: number;
     RoleID: string;
-    UserEmail: string;
-    UserPassword: string; 
+    Name: string;
+    Surname: string;
+    Email: string;
+    Password: string; 
     SessionID: string;
 }

@@ -1,4 +1,4 @@
 export class InventoryType {
-    TypeID: string;
-    Name: string;
+    typeID: string;
+    name: string;
 }
